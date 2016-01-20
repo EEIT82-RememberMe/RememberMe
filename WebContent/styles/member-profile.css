@@ -1,0 +1,15 @@
+@CHARSET "UTF-8";
+#tab ,#tab2
+{
+	width: 340px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top:50px;
+}
+.nav-tabs>li>a 
+{
+	color:white;
+}
+.nav-tabs>li>a:hover {
+    color:black;
+}

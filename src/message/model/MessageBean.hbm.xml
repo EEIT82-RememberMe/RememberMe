@@ -1,0 +1,19 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated 2015/12/12 ?????? 04:54:15 by Hibernate Tools 3.5.0.Final -->
+<hibernate-mapping>
+    <class name="message.model.MessageBean" table="MESSAGEINFORMATIONS">
+        <id name="messageId" type="int">
+            <column name="MESSAGEID" />
+            <generator class="assigned" />
+        </id>
+        <property name="messageTime" type="java.sql.Timestamp">
+            <column name="MESSAEGTIME" />
+        </property>
+        <property name="messageContent" type="java.lang.String">
+            <column name="MESSAGECONTENT" />
+        </property>
+        <many-to-one name="MEMBER" column="memberId" class="model.MemberBean" cascade="all" outer-join="true" unique="true"></many-to-one>
+    </class>
+</hibernate-mapping>

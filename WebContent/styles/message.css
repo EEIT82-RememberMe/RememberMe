@@ -1,0 +1,190 @@
+@CHARSET "UTF-8";
+
+#message_table{
+	margin-left: auto;
+    margin-right: auto;
+	padding:0px;
+}
+.post_reset
+{
+	padding: 10px;
+	color:white;
+	border:none;
+	background:transparent;
+}
+#td_but{
+	text-align: left;
+}
+#message_table tr td textarea {
+    color: white;
+    background: transparent;
+    width: 100%;
+    font-size:18px;
+}
+#td_head{
+	padding: 5px;
+    text-align: left;
+    font-size:20px;
+}
+#message_table tr td input{
+	color:white;
+}
+#message_table tr td input:hover{
+	text-decoration:underline;
+}
+#message_table{
+	width:70%;
+}
+#message_show{
+	margin-top:10%;
+	padding:0px;
+	margin-left:auto;
+	margin-right:auto;
+	width:70%;
+	background-color: black;
+	border-radius:150px;
+}
+#showbody
+{
+	background:black;
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+}
+#table_page_css{
+	margin-left:47%;
+	margin-top:3%;
+}
+
+.messageName{
+	text-align: left;
+	border:1px solid white;
+	padding:20px;
+	margin: 10px !important;
+}
+#content{
+	font-size: 16px;
+    background: transparent;
+}
+.thth
+{
+	text-align: center;
+}
+#respcel{
+	background-color:#4400B3;
+}
+.fontcontent{
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+}
+.refontcontent{
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+	padding: 15px 0px 0px 40px;
+}
+.fontmesgcontent{
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+	
+}
+.mesgborder
+{
+	border-bottom: 1px solid;
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+}
+.fontremesgcontent{
+	
+}
+.mesghref{
+	padding: 10px;
+	width: 100%;
+	text-align: right;
+}
+.remesghref{
+	padding-right: 10px;
+    width: 100%;
+    text-align: right;
+}
+.remesghref a{
+	color: antiquewhite;
+    font-size: 12px;
+}
+.remesghref a:hover{
+	color: antiquewhite;
+    font-size: 12px;
+}
+.mesghref  a{
+	color: antiquewhite;
+    font-size: 12px;
+}
+.mesghref  a:hover{
+	color: antiquewhite;
+    font-size: 12px;
+}
+#responsend
+{
+	color:white;
+	background:transparent;
+	border:none;
+}
+#responsend:hover
+{
+	color:white;
+	background:transparent;
+	text-decoration:underline;
+	border:none;
+}
+#respcel
+{
+	color:white;
+	background:transparent;
+	border:none;
+}
+#respcel:hover
+{
+	color:white;
+	background:transparent;
+	text-decoration:underline;
+	border:none;
+}
+.responseDiv{
+/* 	text-align:end; */
+}
+.dialog{
+/*     margin-left:78px; */
+    margin-top:2%; 
+    -webkit-border-top-left-radius:220px 120px;
+    -webkit-border-top-right-radius:220px 120px;
+    -webkit-border-bottom-right-radius:220px 120px;
+    -webkit-border-bottom-left-radius:220px 120px;
+    -moz-border-radius:220px / 120px;
+    border-radius:220px / 120px;
+    position:relative;
+}
+
+.dialog span.dialogtop{
+	width:5px;
+    height:5px;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    left:-27px;
+    bottom:101px;
+}
+.redialog{
+	
+}
+.redialog span{width:0; height:0; font-size:0; background:#beceeb; overflow:hidden; position:absolute;}
+.redialog span.redialogbot{
+	width:10px;
+    height:10px;
+    -moz-border-radius:30px;
+    -webkit-border-radius:30px;
+    border-radius:30px;
+    left:216px;
+    bottom:77px;
+}
+.redialog span.redialogtop{
+	width:5px;
+    height:5px;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    left:240px;
+    bottom:111px;
+}

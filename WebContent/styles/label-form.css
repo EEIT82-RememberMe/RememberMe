@@ -1,0 +1,120 @@
+@CHARSET "UTF-8";
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, abbr, address, cite, code, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+.simple-form-wrapper {
+    max-width: 600px;
+    margin: 0 auto;
+    padding: 0 50px;
+    min-height: 400px;
+}
+.inner
+{
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+	margin-top:150px;
+	
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+    color:white;
+}
+.form-row {
+    overflow: hidden;
+    margin-bottom: 1em;
+    font-size: 13.5px;
+    width: 80%;
+}
+body.simple-form-layout #main .form-row .form-head {
+    padding-top: 6px;
+    width: 100px;
+}
+body.simple-form-layout #main .form-row .form-head+.form-content {
+    margin-left: 100px;
+}
+.form-row .form-content input[type=text], .form-row .form-content input[type=email], .form-row .form-content input[type=password] {
+    width: 100%;
+}
+.form-content {
+    margin-left: 100px;
+}
+input[type=text], input[type=password] {
+    background: white;
+    border: 1px solid #ccc;
+    font-size: 16px;
+    margin-top: 2px;
+}
+.form-row .form-head {
+    width: 100px;
+    float: left;
+    padding-right: 10px;
+    padding-top: 6px;
+    
+}
+.form-row .form-content ul {
+    list-style: none;
+}
+input[type=checkbox]+label {
+    position: relative;
+}
+input[type=submit] {
+	    margin-right: 90px;
+    -webkit-appearance: none;
+    -webkit-background-clip: padding-box;
+    -moz-background-clip: padding;
+    background-clip: padding-box;
+    -webkit-border-radius: 1px;
+    -moz-border-radius: 1px;
+    border-radius: 1px;
+    background-color: darkgrey;
+    color: black;
+    border: 0 none;
+    padding: .6em 2em .4em;
+    font-size: 13px;
+    text-transform: uppercase;
+    cursor: pointer;
+}
+.actions {
+    text-align: center;
+    font-size: 13px;
+}
+.actions a {
+    margin-left: 2em;
+}
+a {
+    text-decoration: none;
+    color: #fff;
+}
+a {
+    margin: 0;
+    padding: 0;
+    font-size: 100%;
+    vertical-align: baseline;
+    background: transparent;
+}
+.page-title {
+    font-size: 15px;
+    color:white;
+}
+.center {
+    text-align: center;
+}
+span
+{
+	color:white;
+}
+.must{
+	color:red;
+	}
+#about_left
+{
+	color:white;
+}

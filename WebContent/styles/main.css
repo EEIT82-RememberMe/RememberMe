@@ -1,0 +1,423 @@
+@CHARSET "UTF-8";
+@font-face {
+    font-family: 'QuicksandBook';
+    src: url('../fonts/Quicksand_Book-webfont.eot');
+    src: url('../fonts/Quicksand_Book-webfont.eot?#iefix') format('embedded-opentype'),
+    url('../fonts/Quicksand_Book-webfont.woff') format('woff'),
+    url('../fonts/Quicksand_Book-webfont.ttf') format('truetype'),
+    url('../fonts/Quicksand_Book-webfont.svg#QuicksandBook') format('svg');
+    font-weight: normal;
+    font-style: normal;}
+html, body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, del, dfn, em, img, ins, kbd, q, samp, small, strong, sub, sup, var, b, i, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, figcaption, figure, footer, header, hgroup, menu, nav, section, summary, time, mark, audio, video 
+{
+    margin: 0;
+    padding: 0;
+    border: 0;
+    outline: 0;
+    vertical-align: baseline;
+    background: transparent;
+}    
+html {
+/*     background: #000000 url("../images/textured-black.jpg") repeat-x center top fixed; */
+    color: #000000;
+}
+#index_body
+{
+	/* Location of the image */
+/* 	background-image: url("../images/cover2.jpg"); */
+}
+#body_sub
+{
+/* 	background-image: url("../images/bg-header.jpg"); */
+	background-color:black;
+}
+body {
+	/* Background image is centered vertically and horizontally at all times */
+  	background-position: center center;
+  	/* Background image doesn't tile */
+  	background-repeat: no-repeat;
+  	 /* Background image is fixed in the viewport so that it doesn't move when 
+     the content's height is greater than the image's height */
+  	background-attachment: fixed;
+  	/* This is what makes the background image rescale based
+     on the container's size */
+  	background-size: cover;
+  	/* Set a background color that will be displayed
+     while the background image is loading */
+  	background-color: #464646;
+  	background-size: cover;
+  	font-size: 14px;
+    letter-spacing: 0.1em;
+    line-height: 180%;
+  	
+    color: #FFFFFF;
+    font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+    font-size: 90%;
+    margin: 0px;
+    text-align: center;
+}
+#top_news {
+	background-color: rgba(0, 0, 0, 0.3);
+    border-top: 1px solid #535353;
+    border-bottom: 1px solid #535353;
+    position: relative;
+}
+#top_news h2 {
+    text-align: center;
+    font-size: 20px;
+    margin-top: -18px;
+    margin-bottom: 20px;
+}
+.NL {
+    letter-spacing: 0.14em;
+    font-family: 'NationalWeb-Light';
+    line-height: 1.4;
+}
+#top_news h2 span {
+    background: #fff;
+    padding: 0 15px;
+    
+    margin-right: 700px;
+}
+#top_news .innerbox {
+    width: 100%;
+}
+#top_news dl {
+    margin-bottom: 20px;
+}
+#top_news dt span {
+    display: inline-block;
+    min-width: 50px;
+    line-height: 1.4;
+    background: #535353;
+    padding: 0 3px;
+    color: #fff;
+    font-size: 13px;
+    text-align: center;
+    margin-right: 10px;
+}
+#top_news dl a {
+    text-decoration: underline;
+    color: #3b3b3b;
+}
+#top_news #more {
+    width: 50%;
+    font-size: 20px;
+}
+a.btn_more {
+    display: block;
+    text-decoration: none;
+    color: #fff;;
+}
+.btn_more {
+    border: 1px solid #535353 !important;
+    text-align: center;
+}
+a.btn_more:hover {
+    color: #fff;
+    background: #535353;
+    
+    transition: all 0.3s ease-out;
+}
+#innerbox
+{
+	width: 50%;
+    color: whitesmoke;
+    margin-left: 224px;
+    text-align: left;
+}
+dd
+{
+	margin-left: 300px;
+    text-align: left;
+}
+#search
+{
+	margin-top:120px;
+}
+#gallery
+{
+	margin-top:60px;
+}
+.img_prod
+{
+/* 	padding:20px; */
+/* 	width:224px; */
+/* 	height:224px; */
+	width:340px;
+	height:224px;
+}
+.prod_nav ul
+{
+	color:white;
+	float:left;
+	padding-left:20px;
+}
+ul.img-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  text-align: center;
+}
+
+ul.img-list li {
+  display: inline-block;
+  height: 224px;
+  margin: 0 1em 1em 0;
+  position: relative;
+  width: 224px;
+}
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 224px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 224px;
+}
+
+span.text-content span {
+  display: table-cell;
+  text-align: center;
+  vertical-align: middle;
+}
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 224px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 224px;
+  opacity: 0;
+}
+
+span.text-content:hover {
+  opacity: 1;
+}
+span.text-content {
+  background: rgba(0,0,0,0.5);
+  color: white;
+  cursor: pointer;
+  display: table;
+  height: 224px;
+  left: 0;
+  position: absolute;
+  top: 0;
+  width: 224px;
+  opacity: 0;
+  -webkit-transition: opacity 500ms;
+  -moz-transition: opacity 500ms;
+  -o-transition: opacity 500ms;
+  transition: opacity 500ms;
+}
+#prod_contain
+{
+	color:white;
+}
+#product_form
+{
+	color:black;
+}
+#about_title
+{
+/* 	float:left; */
+}
+#message_table{
+	margin-left: auto;
+    margin-right: auto;
+	padding:0px;
+	color:white;
+}
+.post_reset
+{
+	padding: 10px;
+	color:white;
+	border:none;
+	background:transparent;
+}
+#td_but{
+	text-align: left;
+}
+#message_table tr td textarea {
+    color: white;
+    background: transparent;
+    width: 100%;
+    font-size:18px;
+}
+#td_head{
+	padding: 5px;
+    text-align: left;
+    font-size:20px;
+}
+#message_table tr td input{
+	color:white;
+}
+#message_table tr td input:hover{
+	color:white;
+	text-decoration:underline;
+}
+#message_table{
+	width:70%;
+}
+#message_show{
+	margin-top:10%;
+	padding:0px;
+	margin-left:auto;
+	margin-right:auto;
+	width:70%;
+	background-color: black;
+	border-radius:150px;
+	color:white;	
+}
+#showbody
+{
+	background:black;
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+}
+#table_page_css{
+	margin-left:47%;
+	margin-top:3%;
+}
+
+.messageName{
+	text-align: left;
+	border:1px solid white;
+	padding:20px;
+	margin: 10px !important;
+}
+#content{
+	font-size: 16px;
+    color: white;
+    background: transparent;
+}
+.thth
+{
+	text-align: center;
+	color:white;
+}
+#respcel{
+	background-color:#4400B3;
+}
+.fontcontent{
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+}
+.refontcontent{
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+	padding: 15px 0px 0px 40px;
+}
+.fontmesgcontent{
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+	
+}
+.mesgborder
+{
+	border-bottom: 1px solid;
+	font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+}
+.fontremesgcontent{
+	
+}
+.mesghref{
+	padding: 10px;
+	width: 100%;
+	text-align: right;
+}
+.remesghref{
+	padding-right: 10px;
+    width: 100%;
+    text-align: right;
+}
+.remesghref a{
+	color: antiquewhite;
+    font-size: 12px;
+}
+.remesghref a:hover{
+	color: antiquewhite;
+    font-size: 12px;
+}
+.mesghref  a{
+	color: antiquewhite;
+    font-size: 12px;
+}
+.mesghref  a:hover{
+	color: antiquewhite;
+    font-size: 12px;
+}
+#responsend
+{
+	color:white;
+	background:transparent;
+	border:none;
+}
+#responsend:hover
+{
+	color:white;
+	background:transparent;
+	text-decoration:underline;
+	border:none;
+}
+#respcel
+{
+	color:white;
+	background:transparent;
+	border:none;
+}
+#respcel:hover
+{
+	color:white;
+	background:transparent;
+	text-decoration:underline;
+	border:none;
+}
+.responseDiv{
+/* 	text-align:end; */
+}
+.dialog{
+/*     margin-left:78px; */
+    margin-top:2%; 
+    -webkit-border-top-left-radius:220px 120px;
+    -webkit-border-top-right-radius:220px 120px;
+    -webkit-border-bottom-right-radius:220px 120px;
+    -webkit-border-bottom-left-radius:220px 120px;
+    -moz-border-radius:220px / 120px;
+    border-radius:220px / 120px;
+    position:relative;
+}
+
+.dialog span.dialogtop{
+	width:5px;
+    height:5px;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    left:-27px;
+    bottom:101px;
+}
+.redialog{
+	
+}
+.redialog span{width:0; height:0; font-size:0; background:#beceeb; overflow:hidden; position:absolute;}
+.redialog span.redialogbot{
+	width:10px;
+    height:10px;
+    -moz-border-radius:30px;
+    -webkit-border-radius:30px;
+    border-radius:30px;
+    left:216px;
+    bottom:77px;
+}
+.redialog span.redialogtop{
+	width:5px;
+    height:5px;
+    -moz-border-radius:15px;
+    -webkit-border-radius:15px;
+    border-radius:15px;
+    left:240px;
+    bottom:111px;
+}

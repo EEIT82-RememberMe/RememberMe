@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE hibernate-configuration PUBLIC
+		"-//Hibernate/Hibernate Configuration DTD 3.0//EN"
+		"http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+ 		
+  		<property name="connection.datasource">java:comp/env/jdbc/xxx</property>    
+<!--         <property name="hibernate.connection.driver_class">com.microsoft.sqlserver.jdbc.SQLServerDriver</property> -->
+<!--         <property name="hibernate.connection.url">jdbc:sqlserver://10.211.55.4:1433;database=RememberMeMusic</property> -->
+<!--         <property name="hibernate.connection.username">sa</property> -->
+<!--         <property name="hibernate.connection.password">P@ssw0rd</property> -->
+        
+        
+		<property name="hibernate.current_session_context_class">thread</property>
+		<property name="hibernate.show_sql">true</property>
+        <property name="hibernate.dialect">org.hibernate.dialect.SQLServerDialect</property>
+        <property name="hibernate.transaction.flush_before_completion">true</property>  
+        
+        		<mapping class="news.model.NoticeBean" />
+     		<mapping class="news.model.MusicBean" />
+     		<mapping class="member.model.MemberBean" />
+     		<mapping class="menu.model.MenuCategoryBean" />
+      		<mapping class="menu.model.MenuFoodBean" />
+      		<mapping class="products.model.ProductBean" /> 
+      		<mapping class="orders.model.OrdersBean" /> 
+      		<mapping class="orders.model.OrderDetailBean" /> 
+      		<mapping class="message.model.MessageBean"/>
+     		<mapping class="message.model.MessageResponseBean"/>
+     		<mapping class="admin.model.AdminBean"/>  
+<!--     		  <mapping resource="model/MusicBean.hbm.xml" />  -->
+    
+    </session-factory>
+</hibernate-configuration>

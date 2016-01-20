@@ -1,0 +1,127 @@
+@CHARSET "UTF-8";
+
+#header{
+/* 	background: #000; */
+/* background-color: rgba(0, 0, 0, 0.5); */
+	position: absolute;
+    width: 100%;
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 3.5%;
+    padding-right: 3.5%;  
+    left: 0;
+    top: 0;
+    z-index: 99;
+    -webkit-transform: translateZ(0);
+    color: #FFFFFF;
+    font-family: QuicksandBook, Helvetica, Arial, sans-serif;
+    font-size: 90%;
+    margin: 0px;
+    text-align: center;
+} 
+#header .hd-bg {
+  
+}
+#header .container {  
+	padding-top: 20px;
+    padding-right: 15px;
+    padding-left: 15px;
+    margin-right: auto;
+    margin-left: auto;
+    
+}
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+#header>div {
+    padding-top: 15px;
+    position: relative;
+    
+}   
+.dropdown-submenu {
+  position: relative;
+}
+.dropdown-submenu > .dropdown-menu {
+  top: 0;
+  left: 100%;
+  margin-top: -6px;
+  margin-left: -1px;
+}
+.dropdown-submenu:hover > .dropdown-menu {
+  display: block;
+}
+.dropdown-submenu:hover > a:after {
+  border-left-color: #fff;
+}
+.dropdown-submenu.pull-left {
+  float: none;
+}
+.dropdown-submenu.pull-left > .dropdown-menu {
+  left: -100%;
+  margin-left: 10px;
+}
+
+.navbar-inverse
+{
+/* 	background:transparent; */
+	background: none ; 
+  	border: 0 ;
+  	box-shadow: none ;
+  	-webkit-box-shadow: none ;
+  	
+}
+.navbar.navbar-inverse li a {
+    color: white;
+    font-size:130%;
+}
+.navbar.navbar-inverse a{
+	color: white;
+	font-size:300%;
+}
+.navbar.navbar-inverse ul{
+/* 	background-color:#000000; */
+background-color: rgba(0, 0, 0, 0.22);
+}
+.navbar.navbar-inverse li a:hover{
+	background-color: rgba(221, 221, 221, 0.55);
+	color:#000000;
+}
+.logo_img
+{
+	width:200px;
+	height:200px;
+	margin-top:20px;
+	
+}
+.logo_div
+{
+	width:240px;
+	height:240px;
+	background-color: rgba(255, 255, 255, 0.7);
+}
+#functions {
+    position: absolute;
+    right: -5px;
+    top: 10px;
+    font-size: 15px;
+    padding-right: 1px;
+}
+#functions ul {
+    list-style: none;
+}
+#functions>ul>li {
+    float: left;
+    padding: 10px;
+}
+#functions>ul>li>a {
+    color:white;
+    text-decoration:none;
+}
+#functions #cart{
+    width: 100px;
+    padding-left: 40px;
+/*     background-image: url("../images/cart.png"); */
+    background-repeat: no-repeat;
+    background-position: 45px 5px;
+}

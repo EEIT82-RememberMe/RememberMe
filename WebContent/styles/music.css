@@ -1,0 +1,47 @@
+@CHARSET "UTF-8";
+#body_sub
+{
+	padding-top: 40px; 
+  	padding-bottom: 40px; 
+	color:white;
+}
+#div_notice
+{
+	margin-top:80px;
+}
+
+.img1
+{
+	max-height:100%;
+	 max-width:100%;
+/* 	width:100%; */
+}
+.row .thumbnail{
+	 border-radius:0;
+     border:none;
+     background: transparent;
+     box-shadow:none;  
+     border:1px solid silver;
+	 padding:0px; 
+  }
+.row .thumbnail .caption{
+	 font-family: QuicksandBook,微軟正黑體,Helvetica, Arial, sans-serif;
+	 color:white;
+	 letter-spacing: 0.1em;
+	 line-height:1.8em;
+	 font-size:110%;
+  }
+.container .pager li>a, .pager li>span {
+    display: inline-block;
+    padding: 5px 14px;
+/*     background-color: #fff; */
+    background: transparent;
+    border:none;
+    border: 1px solid #ddd; 
+    border-radius: 0px;
+    color:white;
+}
+.container .pager li>a:hover, .pager li>span:hover{
+	background-color: #fff;
+	color:black;
+}

@@ -11,7 +11,6 @@ import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-import javax.servlet.http.HttpSession;
 
 import com.oreilly.servlet.MultipartRequest;
 
@@ -22,10 +21,9 @@ import products.model.ProductService;
 public class ModProduct extends HttpServlet {
 	private static final long serialVersionUID = 1L;
 	
-	private static String UPLOAD_DIRECTORY = "/Users/ougoukun/Documents/程式設計/RememberMe/RememberMe82/WebContent/imageProducts";
+	private final String UPLOAD_DIRECTORY = "/Users/zhengnaixuan/Desktop/iiiHibernate/HibernateWorks/RememberMe0114/WebContent/imageProducts";
 	
-    public ModProduct() 
-    {
+    public ModProduct() {
         super();
     }
 	protected void doGet(HttpServletRequest request, 
@@ -34,8 +32,6 @@ public class ModProduct extends HttpServlet {
 		request.setCharacterEncoding("UTF-8");
 		String action = request.getParameter("action");
 		String page = request.getParameter("page");
-		//System.out.println(action);
-		//this.doPost(request, response);
 		if(action.equals("delete"))
 		{		
 			String num = request.getParameter("productId");
@@ -45,7 +41,7 @@ public class ModProduct extends HttpServlet {
 			ProductService productService = new ProductService();
 			mb.setProductId(number);
 			boolean result = productService.delete(mb);
-			RequestDispatcher rd = request.getRequestDispatcher("/products.controller/ProductManager?page=1");
+			RequestDispatcher rd = request.getRequestDispatcher("/products.controller/ProductManager?page="+page);
 			rd.forward(request, response);
 			return;
 		}
@@ -57,7 +53,6 @@ public class ModProduct extends HttpServlet {
 		String encoding = "UTF8";
 		int maxFileSize = 50000*1024;
 		MultipartRequest mreq = new MultipartRequest(request,UPLOAD_DIRECTORY,maxFileSize,encoding);
-		
 		
 		String productNameTw = mreq.getParameter("productNameTw");
 		String productNameUs = mreq.getParameter("productNameUs");	
@@ -76,16 +71,13 @@ public class ModProduct extends HttpServlet {
 		
 			ProductBean pb = new ProductBean(productNameTw,productNameUs,productDescription
 					,remarks,productImage,productPriceInt,stockInt,dateUpdate);
-			
-			HttpSession session = request.getSession();
 			ProductService productService = new ProductService();
 			if("新增".equals(action))
 			{
 				ProductBean result = productService.insert(pb);
-				session.setAttribute("select", result);
-//				RequestDispatcher rd = request.getRequestDispatcher("/products.controller/ProductManager?page=1");
-//				rd.forward(request, response);
-				response.sendRedirect("../products.controller/ProductManager?page=1");
+				request.setAttribute("select", result);
+				RequestDispatcher rd = request.getRequestDispatcher("/products.controller/ProductManager?page=1");
+				rd.forward(request, response);
 				return;
 			}
 			else if("更新".equals(action))
@@ -95,12 +87,11 @@ public class ModProduct extends HttpServlet {
 				int productIdInt = Integer.valueOf(productId);
 				pb.setProductId(productIdInt);
 				ProductBean result = productService.update(pb);
-				session.setAttribute("select", result);
-//				RequestDispatcher rd = request.getRequestDispatcher("/products.controller/ProductManager?page="+page);
-//				rd.forward(request, response);
-				response.sendRedirect("../products.controller/ProductManager?page="+page);
+				request.setAttribute("select", result);
+				RequestDispatcher rd = request.getRequestDispatcher("/products.controller/ProductManager?page="+page);
+				rd.forward(request, response);
 				return;
-			}	
+			}
 	}
 
 }

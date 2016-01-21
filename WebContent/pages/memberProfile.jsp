@@ -63,7 +63,6 @@
 				                    <tr>
 				                        <td>訂單編號</td>
 				                        <td>訂單日期</td>
-				                        <td>總金額</td>
 				                        <td>訂單狀態</td>
 				                        <td></td>
 				                    </tr>
@@ -73,7 +72,6 @@
 					                    <tr>
 					                        <td>${orderList.orderId}</td>
 					                        <td>${s2}</td>
-					                        <td>${orderList.totalQuantity}</td>
 					                        <td>${orderList.ordersStatus}</td>
 					                        <td>
 					                        	<a style="text-decoration:none;" href="${pageContext.request.contextPath}/pages/selectDetail.jsp?orderId=${orderList.orderId}">

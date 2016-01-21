@@ -56,8 +56,6 @@ $(function(){
 <body>
 	<jsp:include page="/includes/adminTop.jsp" />
 	<jsp:include page="/includes/adminLeft.jsp" />
-		<c:set var="s1" value="${dateCreate}"/>
-		<c:set var="s2" value="${fn:substring(s1,0,16)}"/>
 	
 		<section id="main" class="column"> 
 		
@@ -66,7 +64,7 @@ $(function(){
 				<input type="hidden" class="pg" value="${currentPage}"/>
 				<span class="head">產品管理區</span>
 				<span class="sub1">目前總資料筆數: ${datas}</span>
-				<span class="sub2">上次更動日期 : ${s2}</span>
+				<span class="sub2">上次更動日期 : ${dateCreateString}</span>
 				<span class="sub2">
 				<a class="button" href="<c:url value='/admin/createProductData.jsp'/>">
 				<img src="../icons/add_file.png"/>新增資料

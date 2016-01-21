@@ -89,7 +89,7 @@
 						(20:30最後點餐～21:00飲品最後點餐)<br>
 					  </div>
 				</div>
-				<h3 class="page-title"><span id="about_title">Instagram feed</span><hr></h3>
+				<h3 class="page-title"><span id="about_title"></span></h3>
 			</div>
 		</div>
 	</div>

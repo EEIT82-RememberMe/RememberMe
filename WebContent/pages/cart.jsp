@@ -85,13 +85,32 @@
                                             		
                                             		<form action="<c:url value='../products.controller/ProcessCart'/>" method="post">
                                             			NT ${item.product.productPrice} x 
+                                            			<input type="hidden" name="productPrice" class="price" value="<c:out value='${item.product.productPrice}'/>">
                                             			<input type="number" min="1" max="${item.product.stock}" step="1" value='<c:out value='${item.quantity}'/>' name="quantity" class="quantity">
-                                            			<input type="hidden" name="productId" value="<c:out value='${item.product.productId}'/>">
+                                            			<input type="hidden" name="productId" class="amount" value="<c:out value='${item.product.productId}'/>">
+                                            			<script>
+                                            			//$(".single_price").each(function(){
+                                            			
+//                                             			$(function(){     	   	
+//                                                     		$("body").on("change", ".quantity", function(){
+//                                                     			var singlePrice = parseInt($(this).prev(".price").val() * $(this).val());
+//                                                     			$(this).parents(".qty").find(".total").text(singlePrice);
+//                                                     			var total = 0;
+//                                                     			$(".total").each(function(){
+//                                                         			var price = parseInt($(this).text())  
+//                                                         			total += price;
+//                                                         		});
+//                                                         		$("#total_price").text(total);
+//                                                         		//$("#last_price").text(total);
+//                                                     		});
+//                                             			});
+                                            			</script>
                                             			<input type="submit" name="action" value="更新" style="background-color:Transparent;border:none;">
                                             		</form>
                                             		</p>
                                             	</li>
-                                            <li><p>Total : ${item.quantity * item.product.productPrice}</p></li>
+                                            <li><p>Total : <span class="total">${item.quantity * item.product.productPrice} NT</span></p></li>
+                                            <input type="hidden" class="single_price" value="${item.quantity * item.product.productPrice}" />
                                         </ul>
                                         <div class="delivery">
                                             <div class="clearfix"></div>
@@ -105,16 +124,28 @@
                     </div>
                     <div class="col-md-3 cart-total">
                         <div class="price-details">
-                            <h3 style="color:white">Price Details</h3>
-                            <span>Total</span>
-                            <span class="total1">${cart.totalFormat}</span>
-                            <span>Discount</span>
-                            <span class="total1">10%(Festival Offer)</span>
+                            <h3 style="color:white">價格明細</h3>
+                            <span>小計</span>
+                            <script>
+                            $(function(){
+                            	var price = 0;
+                            	var total = 0;   	
+                        		$(".single_price").each(function(){
+                        			price = parseInt($(this).val())  
+                        			total += price;
+                        			})	
+                        			$("#total_price").text(total);
+                        			$("#last_price").text(total);
+                        		});
+                            </script>
+                            <span class="total1" id="total_price"></span>
+                            <span>折扣</span>
+                            <span class="total1">0%</span>
                         </div>
-                        <hr class="featurette-divider">
+                        <hr style="width:100%">
                         <ul class="total_price">
-                           <li class="last_price"> <h4>TOTAL</h4></li>	
-                           <li class="last_price"><span>${cart.totalFormat}</span></li>
+                           <li class="last_price"> <h4>總額</h4></li>	
+                           <li id="last_price"><span></span></li>
                            <div class="clearfix"> </div>
                         </ul> 
                         <div class="clearfix"></div>

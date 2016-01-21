@@ -47,17 +47,17 @@
 			<div class="col-md-5">
                     
                         <h4 class="pull-right">${product.productPrice} NT</h4>
-                        <h3>${product.productNameTw} ${product.productNameUs}</h3>                      
-                        <p>${product.productDescription}</p>                         
-                        <p>${product.remarks}</p>  
+                        <h3 class="prod_title">${product.productNameTw} ${product.productNameUs}</h3>                      
+                        <p class="prod_desc">${product.productDescription}</p>                         
+                        <p class="prod_remark">${product.remarks}</p>  
                         <p>
                         <form id="product_form" action="../products.controller/ProcessCart?productId=${product.productId}" method="post">
-  						<span style="color:white">數量</span><input type="number" min="0" max="${product.stock}" step="1" value="1" name="quantity">			
-  						<span style="color:white">庫存量：${product.stock}</span>  
-  						<input type="submit" value="加入購物車" name="action">
+  						<span class="prod_num" style="color:white">數量</span><input type="number" min="1" max="${product.stock}" step="1" value="1" name="quantity">			
+  						<span style="color:white">(庫存量：${product.stock})</span>  
+  						<br><input type="submit" value="加入購物車" name="action" class="prod_num">
 						</form>
                         </p>  
-                        <div><a href="<c:url value='/pages/products.jsp'/>">繼續購物</a></div>     
+                        <div><a href="<c:url value='/pages/products.jsp'/>" class="back">回購物區</a></div>     
             </div>
         </div>
       

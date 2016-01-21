@@ -39,8 +39,11 @@ public class ProductManager extends HttpServlet {
 		ProductService productService = new ProductService();
 		List<ProductBean> result = productService.select(bean,page);
 		int totalPages = productService.getTotalPages();
+		int totalData = productService.getTotalDataNum();
+		request.setAttribute("currentPage",page);
 		request.setAttribute("select", result);
 		request.setAttribute("pages", totalPages);
+		request.setAttribute("datas", totalData);
 		request.getRequestDispatcher(
 				"/admin/productList.jsp").forward(request, response);
 	}

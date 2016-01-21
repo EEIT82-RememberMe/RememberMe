@@ -83,6 +83,7 @@
                                             		</p>
                                             	</li>
                                             <li><p>Total : ${item.quantity * item.product.productPrice}</p></li>
+                                            <input type="hidden" class="single_price" value="${item.quantity * item.product.productPrice}" />
                                         </ul>
                                         <div class="delivery">
                                             <div class="clearfix"></div>
@@ -104,25 +105,43 @@
                 <input type="hidden" name="email" value="${email}">
                 <input type="hidden" name="address" value="${address}">
                 <input type="hidden" name="payMethod" value="${payMethod}">
-                <input type="hidden" name="transportPrice" value="${transportPrice}">
+                <input type="hidden" name="transportPrice" id="freight" value="${transportPrice}">
 						<a class="modify" href="<c:url value='/pages/cart.jsp'/>" style="float:right">變更/移除商品</a>                   
                 </div>
                 
                     <div class="col-md-3 cart-total">
-                        <div class="price-details">
-                            <h3 style="color:white">Price Details</h3>
+                        <div class="price-details">     	   
+                            <h3 style="color:white">價格明細</h3>
+                            <script>
+                            $(function(){
+                            	var price = 0;
+                            	var total = 0;   	
+                        		$(".single_price").each(function(){
+                        			price = parseInt($(this).val())  
+                        			total += price;
+                        			})	
+                        			$("#total_price").text(total);
+                        			//$("#last_price").text(total);
+                        			var fin_price = 0;
+                        			fprice =  $("#freight").val();
+                        			pprice = total;
+                        			//alert(fprice);
+                        			fin_price = parseInt(total) + parseInt(fprice);
+                        			$("#last_price").text(fin_price)
+                        		});
+                            </script>
                             <span>小計</span>
-                            <span class="total1">60 NT</span>
+                            <span class="total1" id="total_price"></span>
                             <span>折扣</span>
                             <span class="total1">0%</span>
                             <span>運費</span>
-                            <span class="total1">150.00</span>
+                            <span class="total1">${transportPrice}</span>
                             <div class="clearfix"></div>				 
                         </div>
                         <hr class="featurette-divider">
                         <ul class="total_price">
                            <li class="last_price"> <h4>TOTAL</h4></li>	
-                           <li class="last_price"><span>210 NT</span></li>
+                           <li class="last_price"><span id="last_price"></span></li>
                            <div class="clearfix"> </div>
                         </ul> 
                         <div class="clearfix"></div>

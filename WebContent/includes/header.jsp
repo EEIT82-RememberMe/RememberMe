@@ -58,7 +58,7 @@
 					<!-- /.container-fluid --> </nav>
 					<div id="functions">
 						<ul class="">
-							<li id="cart"><a href="<c:url value='/pages/cart.jsp'/>">購物車<strong></strong> <span>0</span>
+							<li id="cart"><a href="<c:url value='/pages/cart.jsp'/>">購物車<strong></strong> <span></span>
 							</a></li>
 							<%
 								if (session.getAttribute("user") == null) {

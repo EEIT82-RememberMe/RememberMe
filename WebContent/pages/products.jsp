@@ -68,7 +68,10 @@ $(document).ready(function() {
 
 	<div class="container">
 		<div id="search">
-			<input type="text" placeholder="filter by search" id="filter-search" />
+			
+			<img src="../icons/search-icon.png"/><input type="text" placeholder="Search 快速收尋" id="filter-search" autofocus/>
+			<br>	<span class="font_white">可輸入 : 產品中文 英文 價格</span><br><br>
+			<span class="font_white">參考商品：咖啡豆 杯子 餐具 卡片... </span><br>
 		</div>
 <!-- 		<div> -->
 <!-- 			<nav class="prod_nav"> -->

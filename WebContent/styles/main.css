@@ -89,7 +89,7 @@ body {
     display: inline-block;
     min-width: 50px;
     line-height: 1.4;
-    background: #535353;
+    background: black;
     padding: 0 3px;
     color: #fff;
     font-size: 13px;
@@ -420,4 +420,55 @@ span.text-content {
     border-radius:15px;
     left:240px;
     bottom:111px;
+}
+.more-link {
+	letter-spacing: 0.14em;
+    font-family: 'NationalWeb-Light';
+    display: table;
+    text-align: center;
+    text-transform: uppercase;
+    padding: 0 50px;
+    height: 32px;
+    font-size: 15px;
+    line-height: 32px;
+    margin: 20px auto 0;
+    background: #000;
+    color: #FFF;
+}
+
+.more-link:hover {
+    background: brown;
+    color:white;
+    text-decoration:none;
+}
+a:hover {
+    color: #212121;
+    -webkit-transition: all .2s ease;
+    -moz-transition: all .2s ease;
+    -ms-transition: all .2s ease;
+    -o-transition: all .2s ease;
+    transition: all .2s ease;
+}
+hr {
+    background-color: rgba(0,0,0,0.1);
+    border: 0;
+    height: 1px;
+    margin: 0 auto;
+    width: 33%;
+}
+.sharing li {
+    display: inline-block;
+}
+img.icons {
+  border-radius: 50%;
+  -webkit-transition: -webkit-transform .8s ease-in-out;
+  transition: transform .8s ease-in-out;
+}
+img.icons:hover {
+  -webkit-transform: rotate(360deg);
+  transform: rotate(360deg);
+}
+.font_white
+{
+	color:white;
 }

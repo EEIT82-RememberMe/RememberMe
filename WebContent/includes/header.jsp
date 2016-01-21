@@ -36,20 +36,20 @@
 							id="bs-example-navbar-collapse-1">
 							<ul class="nav navbar-nav">
 								<!--li class="active"-->
-								<li><a href="<c:url value='/pages/about.jsp'/>">簡介about <span class="sr-only">(current)</span></a></li>
+								<li><a href="<c:url value='/pages/about.jsp'/>">簡介About <span class="sr-only">(current)</span></a></li>
 								<li class="dropdown"><a href="#" class="dropdown-toggle"
-									data-toggle="dropdown" role="button" aria-expanded="false">消息news
+									data-toggle="dropdown" role="button" aria-expanded="false">消息News
 										<span class="caret"></span>
 								</a>
 									<ul class="dropdown-menu" role="menu">
-										<li><a href="<c:url value='/pages/notice.jsp'/>">公告notice</a></li>
+										<li><a href="<c:url value='/pages/notice.jsp'/>">公告Notice</a></li>
 <!-- 										<li><a href="#">文章article</a></li> -->
-										<li><a href="<c:url value='/pages/music.jsp?page=1'/>">演唱concert</a></li>
+										<li><a href="<c:url value='/pages/music.jsp?page=1'/>">演唱Concert</a></li>
 									</ul></li>
 								<!-- .dropdown -->
-								<li><a href="<c:url value='/pages/menu.jsp'/>">餐點menu</a></li>
-								<li><a href="<c:url value='/pages/products.jsp'/>">產品goods</a></li>
-								<li><a href="${pageContext.request.contextPath}/message.controller/ProcessMessage">聯絡contact</a></li>	
+								<li><a href="<c:url value='/pages/menu.jsp'/>">餐點Menu</a></li>
+								<li><a href="<c:url value='/pages/products.jsp'/>">產品Goods</a></li>
+								<li><a href="${pageContext.request.contextPath}/message.controller/ProcessMessage">留言Comment</a></li>	
 							</ul>
 							<!-- .nav .navbar-nav -->
 						</div>
@@ -58,7 +58,7 @@
 					<!-- /.container-fluid --> </nav>
 					<div id="functions">
 						<ul class="">
-							<li id="cart"><a href="<c:url value='/pages/cart.jsp'/>"><img src="../images/cart.png"> <strong></strong> <span>0</span>
+							<li id="cart"><a href="<c:url value='/pages/cart.jsp'/>">購物車<strong></strong> <span>0</span>
 							</a></li>
 							<%
 								if (session.getAttribute("user") == null) {

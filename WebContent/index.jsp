@@ -56,7 +56,7 @@
 <title>Insert title here</title>
 </head>
 <body id="index_body">
-<!-- <script>
+<script>
   window.fbAsyncInit = function() {
     FB.init({
       appId      : '1652372388346353',
@@ -72,7 +72,7 @@
      js.src = "//connect.facebook.net/en_US/sdk.js";
      fjs.parentNode.insertBefore(js, fjs);
    }(document, 'script', 'facebook-jssdk'));
-</script> -->
+</script>
 <jsp:include page="/includes/header.jsp" />
 	
 
@@ -111,11 +111,24 @@
 			</dl>
 		</div>
 		
-<!-- 		<div id="more" class="NL"> -->
-<!-- 			<a class="btn_more pjax "href="">MORE</a> -->
-<!-- 		</div> -->
+		<div id="more" class="NL">
+			<a class="more-link" href="<c:url value='/pages/notice.jsp'/>">READ MORE</a>
+			<hr>
+		</div>
+		<div id="more" class="sharing">
+			<ul>
+				<li><a href="https://www.facebook.com/remembermecafe/timeline" target="_blank"><img alt="facebook" src="icons/fb_icon.png" class="icons"></a></li>
+				<li><a href="https://www.instagram.com/explore/locations/846848120/" target="_blank"><img alt="instagram" src="icons/ig_icon.png" class="icons"></a></li>
+				<li><a href="http://www.pikore.com/taiwan_rememberme_cafe" target="_blank"><img alt="twitter" src="icons/twitter_icon.png" class="icons"></a></li>
+				<li><a href="http://foxxonthemove.wix.com/remembermecafe-blog#!contact/c24ju" target="_blank"><img alt="mail" src="icons/mail_icon.png" class="icons"></a></li>		
+			</ul>
+		</div>	
+		<div>
+			<p>Copyright © 2016 Design by EEIT82  All rights reserved.</p>
+		</div>	
 	</div>
-</div>		
+</div>	
+		
 <!-- <div
   class="fb-like"
   data-share="true"
